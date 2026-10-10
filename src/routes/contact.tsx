@@ -1,0 +1,9 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { pageMeta, socialLinks } from '@/components/founder-site';
+
+export const Route = createFileRoute('/contact')({ head: () => pageMeta('Connect with Miftah Rahman — Investors & Collaborators', 'Get in touch with Miftah Rahman about Hello-02, mental health partnerships, investment conversations, and meaningful collaboration.'), component: Contact });
+
+function Contact() {
+  return <main className="site-container page-enter"><section className="page-heading"><p className="eyebrow"><span className="status-dot" />Open to meaningful conversations</p><h1>Let’s move<br />something forward<span className="text-primary">.</span></h1><p className="body-copy">Whether you’re an investor, a fellow founder, or a potential partner who shares the mission — I’d love to connect.</p></section><section className="section section-intro"><div><p className="eyebrow text-muted-foreground">Get in touch</p><h2>A conversation.<br />A new possibility.</h2><p className="body-copy mt-5">For Hello-02, mental health initiatives, and partnerships across communities and borders.</p></div><div><a className="contact-option" href="mailto:miftah@hello02.app"><div><span className="small-label">Email</span><strong>miftah@hello02.app</strong></div><ArrowUpRight /></a><a className="contact-option" href={socialLinks.linkedin} target="_blank" rel="noreferrer"><div><span className="small-label">Professional connections</span><strong>LinkedIn</strong></div><ArrowUpRight /></a><a className="contact-option border-b border-border" href={socialLinks.facebook} target="_blank" rel="noreferrer"><div><span className="small-label">Community & updates</span><strong>Facebook</strong></div><ArrowUpRight /></a><p className="small-label mt-7">Dhaka, Bangladesh · Open to global collaboration</p></div></section></main>;
+}

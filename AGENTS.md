@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared founder-site navigation, footer, and reusable venture content in `src/components/founder-site.tsx`; leaf routes own their page content and metadata so every section is independently shareable.
+- Define visual roles and responsive editorial styles in `src/styles.css` and use the existing Button variants for actions to maintain a consistent design system.
+- Label traction with its public reporting date and source rather than presenting historical figures as current live metrics.
