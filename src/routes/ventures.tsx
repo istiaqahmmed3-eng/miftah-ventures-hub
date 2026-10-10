@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
 
-export const Route = createFileRoute('/ventures')({ head: () => pageMeta('Ventures — Miftah Rahman', 'Explore Hello-02 and Team BBS: Miftah Rahman’s work in digital mental healthcare and community-led social impact.'), component: Ventures });
+export const Route = createFileRoute('/ventures')({ head: () => pageMeta('Ventures — Miftah Rahman', 'Explore Hello-02 Mental Health App, the professional-only Hello-02 Support App, and Team BBS.'), component: Ventures });
 
 function Ventures() {
   return <main className="page-enter"><div className="site-container"><section className="page-heading"><p className="eyebrow text-muted-foreground">From conviction to action</p><h1>Work that matters<span className="text-primary">.</span></h1><p className="body-copy">Technology and community, working toward the same goal: making mental health support more accessible.</p></section><section className="section"><VentureRows /></section><section className="section section-intro border-t border-border"><div><p className="eyebrow text-muted-foreground">Hello-02 / Progress</p><h2>A growing community.<br />A shared mission.</h2></div><div><p className="body-copy">In its June 2026 public update, Hello-02 reported 15,743 downloads and 11,576 active users. The platform brings digital mental health support, depression screening, and counseling services closer to people who need them.</p><a href={socialLinks.growth} target="_blank" rel="noreferrer" className="text-link">Read the founder’s update ↗</a><p className="small-label mt-6">Figures as publicly reported in June 2026</p></div></section></div><ContactBand /></main>;
