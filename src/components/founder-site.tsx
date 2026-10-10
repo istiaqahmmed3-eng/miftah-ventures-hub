@@ -1,7 +1,9 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowUpRight, Menu, X, Heart, MoveUpRight } from 'lucide-react';
+import { ArrowUpRight, Menu, X, MoveUpRight } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import helloLogo from '@/assets/hello-02-logo.png.asset.json';
+import supportLogo from '@/assets/hello-02-support-logo.png.asset.json';
 
 export const socialLinks = {
   linkedin: 'https://www.linkedin.com/in/miftah-rahman-hello02/',
@@ -18,12 +20,13 @@ export function SiteHeader() {
         <Link to="/" className="nav-link" activeOptions={{ exact: true }}>Home</Link>
         <Link to="/about" className="nav-link">About</Link>
         <Link to="/ventures" className="nav-link">Ventures</Link>
+        <Link to="/blog" className="nav-link">Blog</Link>
         <Button asChild variant="editorial"><Link to="/contact">Let’s connect <ArrowUpRight /></Link></Button>
       </nav>
       <Button variant="ghost" size="icon" className="mobile-menu" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
     {open && <nav className="site-container mobile-nav" aria-label="Mobile navigation">
-      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Ventures</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
+      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Ventures</Link><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
     </nav>}
   </header>;
 }
@@ -38,7 +41,8 @@ export function ContactBand() {
 
 export function VentureRows() {
   return <div>
-    <a href="https://hello02.app" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo text-primary"><Heart strokeWidth={1.5} /></div><div><h3>Hello-02<span className="text-primary">.</span></h3><p className="small-label">Founder · Mental health technology</p></div><p className="body-copy">Making mental healthcare accessible, affordable, and stigma-free through technology.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></a>
+    <a href="https://hello02.app" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo"><img src={helloLogo.url} alt="Hello-02 Mental Health App logo" width={500} height={500} loading="lazy" /></div><div><h3>Hello-02<span className="text-primary">.</span></h3><p className="small-label">Mental Health App · For everyone</p></div><p className="body-copy">Making mental healthcare accessible, affordable, and stigma-free through technology.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></a>
+    <Link to="/blog/$slug" params={{ slug: 'two-apps-one-purpose' }} className="venture-row group"><div className="venture-logo"><img src={supportLogo.url} alt="Hello-02 Support App logo" width={480} height={480} loading="lazy" /></div><div><h3>Hello-02 Support App</h3><p className="small-label">Exclusively for professionals</p></div><p className="body-copy">The dedicated app exclusively for psychologists and mental health professionals.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></Link>
     <a href="https://teambbs.org" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo">bbs<span className="text-primary">.</span></div><div><h3>Team BBS</h3><p className="small-label">Leadership · Social impact</p></div><p className="body-copy">A youth-led movement for mental health awareness and children’s rights in Bangladesh.</p><MoveUpRight className="venture-arrow group-hover:text-primary" /></a>
   </div>;
 }
