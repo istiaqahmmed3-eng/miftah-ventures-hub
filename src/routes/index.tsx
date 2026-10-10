@@ -1,24 +1,29 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowUpRight, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
+import architecture from '@/assets/founder-architecture.jpg';
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute('/')({
+  head: () => pageMeta('Miftah Rahman — Founder, Hello-02', 'Miftah Rahman is the founder of Hello-02, working to make mental healthcare accessible, affordable, and stigma-free.'),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <main className="page-enter">
+    <section className="hero">
+      <img className="hero-image" src={architecture} alt="Modern architecture rising toward an open sky" width={1920} height={1024} fetchPriority="high" />
+      <div className="site-container hero-inner">
+        <p className="eyebrow"><span className="status-dot" />Founder. Builder. Mental health advocate.</p>
+        <h1>Miftah<br />Rahman<span className="text-primary">.</span></h1>
+        <p className="hero-description">Building a future where mental healthcare is within everyone’s reach.<br />Founder of <span className="text-foreground font-semibold">Hello-02.</span> Driven by purpose.</p>
+        <div className="hero-actions"><Button asChild variant="founder"><Link to="/ventures">Explore my work <ArrowUpRight /></Link></Button><Button asChild variant="editorial"><Link to="/contact">Let’s talk <ArrowUpRight /></Link></Button></div>
+        <p className="hero-footnote"><MapPin size={13} strokeWidth={1.5} />Dhaka, Bangladesh <span className="mx-2">/</span> Building beyond borders</p>
+      </div>
+    </section>
+    <div className="site-container metrics"><div><p className="eyebrow">Purpose, with progress.</p><a href={socialLinks.growth} target="_blank" rel="noreferrer" className="text-[10px] text-muted-foreground mt-2 inline-block underline underline-offset-4">Hello-02 · June 2026 update ↗</a></div><div className="metric"><strong>15,743<span className="text-primary inline">+</span></strong><span>App downloads</span></div><div className="metric"><strong>11,576</strong><span>Reported active users</span></div><div className="metric"><strong>One mission.</strong><span>Mental healthcare for everyone</span></div></div>
+    <section className="site-container section section-intro"><div><p className="eyebrow text-muted-foreground">01 / The motivation</p><h2>A mission worth<br />building for.</h2></div><div><p className="body-copy">Mental health support shouldn’t be a privilege. That belief is at the heart of Hello-02 — and the work I do to bring technology, community, and care closer together.</p><p className="body-copy mt-4">I’m focused on building with purpose: addressing a real human need and creating something that matters beyond the screen.</p><Link to="/about" className="text-link">More about me <ArrowUpRight /></Link></div></section>
+    <section className="site-container pb-20"><div className="flex justify-between items-end mb-8"><p className="eyebrow text-muted-foreground">02 / What I’m building</p><Link to="/ventures" className="text-link mt-0">View ventures <ArrowUpRight /></Link></div><VentureRows /></section>
+    <ContactBand />
+  </main>;
 }
