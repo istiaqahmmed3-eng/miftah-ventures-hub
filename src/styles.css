@@ -181,7 +181,7 @@
 .metrics { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; padding-block: 34px; align-items: center; border-bottom: 1px solid var(--border); gap: 24px; }
 .metric { border-left: 1px solid var(--border); padding-left: 36px; }
 .metric strong { font-size: 32px; line-height: 1.25; font-weight: 600; display: block; }
-.metric span { font-size: 11px; color: var(--muted-foreground); margin-top: 5px; display: block; }
+.metric > span { font-size: 11px; color: var(--muted-foreground); margin-top: 5px; display: block; }
 .section { padding-block: 80px; }
 .section-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
 .section h2 { font-size: 43px; line-height: 1.22; font-weight: 550; margin-top: 18px; }
