@@ -6,3 +6,5 @@
 - [x] Verify the updated pages and logo rendering.
 - [x] Apply the Team BBS logo, Poppins, and Hello-02 brand colors throughout the site.
 - [x] Verify brand styling and logo rendering across pages and screen sizes.
+- [ ] Apply the requested #2938A2 brand color and redesign the founder blog with a featured story and topic browsing.
+- [ ] Verify blog browsing, article navigation, and desktop/mobile layouts.
