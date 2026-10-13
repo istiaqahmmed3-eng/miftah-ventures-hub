@@ -208,6 +208,8 @@
 .page-heading h1 { font-size: 72px; line-height: 1.1; font-weight: 550; margin-block: 24px; }
 .page-heading p { max-width: 640px; }
 .editorial-image { width: 100%; height: 340px; object-fit: cover; margin-top: 42px; }
+.page-heading-portrait { display: grid; grid-template-columns: 1fr auto; gap: 56px; align-items: end; }
+.founder-portrait { width: 300px; height: 380px; object-fit: cover; object-position: top; border-radius: 14px; border: 1px solid var(--border); }
 .principle { padding-block: 28px; border-top: 1px solid var(--border); }
 .principle h3 { font-size: 22px; margin-bottom: 10px; }
 .contact-option { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; border-top: 1px solid var(--border); gap: 20px; }
@@ -274,6 +276,7 @@
 .journal-empty .body-copy { margin-bottom: 24px; }
 .journal-signoff { display: grid; grid-template-columns: 90px 1fr auto; align-items: center; gap: 28px; padding-block: 35px 55px; border-top: 1px solid var(--border); }
 .journal-monogram { font-size: 30px; font-weight: 600; width: 90px; height: 90px; display: grid; grid-auto-flow: column; place-content: center; background: var(--surface); border-radius: 50%; }
+.journal-avatar { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; object-position: top; border: 1px solid var(--border); }
 .journal-signoff h2 { font-size: 23px; margin-block: 8px; font-weight: 600; }
 .journal-signoff .body-copy { max-width: 500px; font-size: 13px; }
 @media (max-width: 1000px) { .journal-heading { flex-direction: column; align-items: flex-start; gap: 20px; } .journal-heading > p { max-width: 550px; } .journal-toolbar { flex-wrap: wrap; } }
