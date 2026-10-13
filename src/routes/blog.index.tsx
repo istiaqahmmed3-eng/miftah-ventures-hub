@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { BlogCards } from '@/components/blog-cards';
 import { ContactBand, pageMeta } from '@/components/founder-site';
 import { blogPosts } from '@/lib/blog-posts';
+import portrait from '@/assets/miftah-rahman-portrait.jpg.asset.json';
 
 export const Route = createFileRoute('/blog/')({ head: () => pageMeta('Blog — Miftah Rahman | Building with Purpose', 'Updates from Hello-02, mental health partnerships, and a closer look at the products Miftah Rahman is building.'), component: Blog });
 
