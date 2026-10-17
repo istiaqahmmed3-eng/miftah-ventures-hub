@@ -336,7 +336,7 @@ header.bg-background { padding-top: 16px; }
   .founder-intro h1 { font-size: 36px; margin-block: 18px; }
   .founder-intro .hero-description { font-size: 14px; }
   .intro-portrait { justify-content: center; margin-top: 12px; }
-  .intro-portrait img { width: 220px; height: 270px; }
+  .intro-portrait img { width: 155px; height: 190px; }
   .founder-roles { grid-template-columns: 1fr; margin-bottom: 12px; }
   .founder-roles > div, .founder-roles > div:first-child, .founder-roles > div:last-child { padding: 20px 0; }
   .founder-roles > div + div { border-left: 0; border-top: 1px solid var(--border); }

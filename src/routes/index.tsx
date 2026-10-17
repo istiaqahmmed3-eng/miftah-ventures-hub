@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowUpRight, Heart, Users, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
-import portrait from '@/assets/miftah-rahman-portrait.jpg.asset.json';
+import portrait from '@/assets/miftah-rahman-cutout.png.asset.json';
 import { BlogCards } from '@/components/blog-cards';
 
 export const Route = createFileRoute('/')({
