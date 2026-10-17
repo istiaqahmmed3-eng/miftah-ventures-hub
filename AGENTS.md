@@ -14,3 +14,4 @@
 - Label traction with its public reporting date and source rather than presenting historical figures as current live metrics.
 - Keep static editorial content in `src/lib/blog-posts.ts` and render it through the blog index and dynamic article route; sourced summaries must link to their original public update rather than imply newly authored personal essays.
 - Use uploaded product logos through Lovable Assets pointers, with a separate local favicon copy; preserve the personal header identity independently of product branding.
+- Use a shared derived transparent portrait asset for large founder introductions, preserving the original portrait for avatars; this allows seamless placement on themed backgrounds.
