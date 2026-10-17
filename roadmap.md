@@ -8,3 +8,5 @@
 - [x] Verify brand styling and logo rendering across pages and screen sizes.
 - [x] Apply the requested #2938A2 brand color and redesign the founder blog with a featured story and topic browsing.
 - [x] Verify blog browsing, article navigation, and desktop/mobile layouts.
+- [x] Redesign the website using the uploaded light, portrait-led reference.
+- [x] Verify navigation, blog browsing, portrait display, and phone layouts.
