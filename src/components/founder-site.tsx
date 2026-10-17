@@ -16,18 +16,19 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return <header className="bg-background">
     <div className="site-container site-header">
-      <Link to="/" className="brand" onClick={() => setOpen(false)}><img src="/favicon.svg" alt="" /><span>Miftah Rahman<span className="text-primary">.</span></span></Link>
+      <Link to="/" className="brand" onClick={() => setOpen(false)}><span className="brand-monogram">M.</span><span>Miftah Rahman</span></Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         <Link to="/" className="nav-link" activeOptions={{ exact: true }}>Home</Link>
         <Link to="/about" className="nav-link">About</Link>
-        <Link to="/ventures" className="nav-link">Ventures</Link>
+        <Link to="/ventures" className="nav-link">Work</Link>
         <Link to="/blog" className="nav-link">Blog</Link>
-        <Button asChild variant="editorial"><Link to="/contact">Let’s connect <ArrowUpRight /></Link></Button>
+        <Link to="/contact" className="nav-link">Contact</Link>
       </nav>
+      <a className="header-social" href={socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
       <Button variant="ghost" size="icon" className="mobile-menu" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
     {open && <nav className="site-container mobile-nav" aria-label="Mobile navigation">
-      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Ventures</Link><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
+      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Work</Link><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
     </nav>}
   </header>;
 }
