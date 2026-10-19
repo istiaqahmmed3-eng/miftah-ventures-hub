@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowUpRight, Heart, Users, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
-import portrait from '@/assets/miftah-rahman-cutout.png.asset.json';
+import portrait from '@/assets/miftah-rahman-pencil.png';
 import { BlogCards } from '@/components/blog-cards';
 
 export const Route = createFileRoute('/')({
@@ -14,7 +14,7 @@ function Index() {
   return <main className="page-enter">
     <section className="site-container founder-intro">
       <div className="founder-intro-copy"><p className="eyebrow">Miftah Rahman <span className="text-primary">/ Founder</span></p><h1><span>Mental health.</span><br /><span>Youth-led impact.</span></h1><p className="hero-description">Building Hello-02 to bring mental healthcare within reach, and leading Team BBS, a youth-led movement for social impact in Bangladesh.</p><div className="hero-actions"><Button asChild variant="founder"><Link to="/ventures">View work <ArrowUpRight /></Link></Button><Button asChild variant="editorial"><Link to="/contact">Get in touch <ArrowUpRight /></Link></Button></div></div>
-      <div className="intro-portrait"><img src={portrait.url} alt="Miftah Rahman, founder of Hello-02" width={413} height={531} fetchPriority="high" /></div>
+      <div className="intro-portrait"><img src={portrait} alt="Pencil sketch of Miftah Rahman, founder of Hello-02" width={768} height={954} fetchPriority="high" /></div>
     </section>
     <section className="site-container founder-roles" aria-label="Areas of focus"><div><span className="role-icon"><Heart size={19} /></span><div><h2>Mental health founder</h2><p>Building Hello-02 for accessible, affordable, stigma-free mental healthcare.</p></div></div><div><span className="role-icon"><Users size={19} /></span><div><h2>Youth-led impact</h2><p>Community and mental health advocacy through Team BBS in Bangladesh.</p></div></div><div><span className="role-icon"><Layers size={19} /></span><div><h2>Technology with purpose</h2><p>Connecting people, professionals, and care through a shared ecosystem.</p></div></div></section>
     <section className="journal-band"><div className="site-container section"><div className="section-heading"><div><p className="eyebrow text-primary">From the founder’s journal</p><h2>Building with purpose<span className="text-primary">.</span></h2></div><Button asChild variant="founder"><Link to="/blog">Explore the blog <ArrowUpRight /></Link></Button></div><BlogCards /></div></section>
