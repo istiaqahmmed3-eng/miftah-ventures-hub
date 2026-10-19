@@ -1,8 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { ContactBand, pageMeta } from '@/components/founder-site';
 import architecture from '@/assets/founder-architecture.jpg';
-import portrait from '@/assets/miftah-rahman-cutout.png.asset.json';
-
+import portrait from '@/assets/miftah-rahman-pencil.png';
 export const Route = createFileRoute('/about')({ head: () => pageMeta('About Miftah Rahman — Purpose-led Founder', 'Meet Miftah Rahman, the Dhaka-based founder of Hello-02 and mental health advocate involved in Team BBS.'), component: About });
 
 function About() {
