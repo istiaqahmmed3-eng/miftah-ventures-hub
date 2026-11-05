@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
+import { AppDownloadBand, ContactBand, VentureRows, pageMeta, socialLinks } from '@/components/founder-site';
 
 export const Route = createFileRoute('/ventures')({ head: () => pageMeta('Ventures — Miftah Rahman', 'Explore Hello-02 Mental Health App, the professional-only Hello-02 Support App, and Team BBS.'), component: Ventures });
 
