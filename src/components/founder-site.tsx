@@ -40,14 +40,13 @@ export function SiteHeader() {
         <Link to="/" className="nav-link" activeOptions={{ exact: true }}>Home</Link>
         <Link to="/about" className="nav-link">About</Link>
         <Link to="/ventures" className="nav-link">Work</Link>
-        <Link to="/blog" className="nav-link">Blog</Link>
         <Link to="/contact" className="nav-link">Contact</Link>
       </nav>
       <a className="header-social" href={socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
       <Button variant="ghost" size="icon" className="mobile-menu" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
     {open && <nav className="site-container mobile-nav" aria-label="Mobile navigation">
-      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Work</Link><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
+      <Link to="/" onClick={() => setOpen(false)}>Home</Link><Link to="/about" onClick={() => setOpen(false)}>About</Link><Link to="/ventures" onClick={() => setOpen(false)}>Work</Link><Link to="/contact" onClick={() => setOpen(false)}>Let’s connect</Link>
     </nav>}
   </header>;
 }
@@ -63,7 +62,7 @@ export function ContactBand() {
 export function VentureRows() {
   return <div>
     <a href="https://hello02.app" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo"><img src={helloLogo.url} alt="Hello-02 Mental Health App logo" width={500} height={500} loading="lazy" /></div><div><h3>Hello-02&nbsp;Mental Health App</h3><p className="small-label">Mental Health App · For everyone</p></div><p className="body-copy">Making mental healthcare accessible, affordable, and stigma-free through technology.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></a>
-    <Link to="/blog/$slug" params={{ slug: 'two-apps-one-purpose' }} className="venture-row group"><div className="venture-logo"><img src={supportLogo.url} alt="Hello-02 Support App logo" width={480} height={480} loading="lazy" /></div><div><h3>Hello-02 Support App</h3><p className="small-label">Exclusively for professionals</p></div><p className="body-copy">The dedicated app exclusively for psychologists and mental health professionals.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></Link>
+    <a href="https://hello02.app" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo"><img src={supportLogo.url} alt="Hello-02 Support App logo" width={480} height={480} loading="lazy" /></div><div><h3>Hello-02 Support App</h3><p className="small-label">Exclusively for professionals</p></div><p className="body-copy">The dedicated app exclusively for psychologists and mental health professionals.</p><ArrowUpRight className="venture-arrow group-hover:text-primary" /></a>
     <a href="https://teambbs.org" target="_blank" rel="noreferrer" className="venture-row group"><div className="venture-logo"><img src={teamBbsLogo.url} alt="Team BBS logo" width={576} height={579} loading="lazy" /></div><div><h3>Team BBS</h3><p className="small-label">Leadership · Social impact</p></div><p className="body-copy">A youth-led movement for mental health awareness and children’s rights in Bangladesh.</p><MoveUpRight className="venture-arrow group-hover:text-primary" /></a>
   </div>;
 }
