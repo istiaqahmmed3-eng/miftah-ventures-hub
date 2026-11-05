@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowUpRight, Menu, X, MoveUpRight } from 'lucide-react';
+import { Apple, ArrowUpRight, Menu, X, MoveUpRight, Play } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import helloLogo from '@/assets/hello-02-logo.png.asset.json';
@@ -11,6 +11,25 @@ export const socialLinks = {
   facebook: 'https://www.facebook.com/themiftahrahman',
   growth: 'https://www.linkedin.com/posts/hello-02-mental-health-app_activity-7475189971155382273-CTns',
 };
+
+export const appStoreLinks = {
+  googlePlay: 'https://play.google.com/store/apps/details?id=com.teambbs.hello02',
+  appStore: 'https://apps.apple.com/app/hello-02-mental-health-app/id6805609446',
+};
+
+export function AppDownloadBand() {
+  return <section className="app-download"><div className="site-container app-download-inner">
+    <div>
+      <p className="eyebrow text-primary">Hello-02 Mental Health App · Free download</p>
+      <h2>Support in your pocket<span className="text-primary">.</span></h2>
+      <p className="body-copy mt-3">Take Hello-02 with you — mental health support for everyone, wherever you are.</p>
+    </div>
+    <div className="store-buttons">
+      <Button asChild variant="founder"><a href={appStoreLinks.googlePlay} target="_blank" rel="noreferrer"><Play size={15} /> Get it on Google Play</a></Button>
+      <Button asChild variant="editorial"><a href={appStoreLinks.appStore} target="_blank" rel="noreferrer"><Apple size={15} /> Download on the App Store</a></Button>
+    </div>
+  </div></section>;
+}
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
