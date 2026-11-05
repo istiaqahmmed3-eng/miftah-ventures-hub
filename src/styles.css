@@ -372,6 +372,9 @@ header.bg-background { padding-top: 16px; }
   .venture-row > .venture-arrow { grid-column: 3; grid-row: 1; }
   .venture-row h3 { font-size: 21px; }
   .contact-band-inner { flex-direction: column; align-items: flex-start; }
+  .app-download-inner { flex-direction: column; align-items: flex-start; }
+  .app-download { padding-block: 48px; }
+  .app-download h2 { font-size: 34px; }
   .contact-band h2 { font-size: 34px; }
   .contact-band { padding-block: 48px; }
   .site-footer { flex-wrap: wrap; gap: 20px; }
