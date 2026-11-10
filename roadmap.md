@@ -11,3 +11,4 @@
 - [x] Redesign the website using the uploaded light, portrait-led reference.
 - [x] Verify navigation, blog browsing, portrait display, and phone layouts.
 - [x] Remove the blog section entirely (pages, nav links, homepage journal, article data, styles) and re-verify all pages.
+- [ ] Rebuild the About page as an investor-focused founder story using only supplied impact figures, then verify desktop/mobile rendering and routing tests.

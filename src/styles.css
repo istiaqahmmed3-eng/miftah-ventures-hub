@@ -237,6 +237,49 @@ header.bg-background { padding-top: 16px; }
 .founder-portrait { width: 280px; max-width: 100%; height: 350px; object-fit: cover; object-position: top; filter: grayscale(1); mix-blend-mode: multiply; mask-image: linear-gradient(to bottom, var(--foreground) 83%, transparent); }
 .principle { padding-block: 28px; border-top: 1px solid var(--border); }
 .principle h3 { font-size: 22px; margin-bottom: 10px; }
+.about-hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr); gap: 56px; align-items: center; min-height: 530px; padding-block: 58px 38px; border-bottom: 1px solid var(--border); }
+.about-hero h1 { max-width: 720px; font-size: 58px; line-height: 1.17; font-weight: 500; margin-block: 24px; }
+.about-lead { max-width: 620px; font-size: 16px; line-height: 1.85; color: var(--muted-foreground); }
+.about-location { display: flex; align-items: center; gap: 10px; margin-top: 25px; font-size: 12px; color: var(--muted-foreground); }
+.about-portrait-wrap { display: flex; justify-content: flex-end; align-self: stretch; align-items: flex-end; min-width: 0; }
+.about-portrait { width: min(100%, 390px); height: 450px; object-fit: contain; object-position: bottom center; }
+.about-story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 72px; align-items: center; }
+.about-story-image img { width: 100%; height: 380px; object-fit: cover; }
+.about-story-image .small-label { margin-top: 14px; }
+.about-story-copy h2, .about-section-heading h2 { font-size: 38px; line-height: 1.28; font-weight: 500; margin-block: 18px 24px; }
+.about-story-copy .body-copy + .body-copy { margin-top: 16px; }
+.about-building { padding-block: 74px; border-block: 1px solid var(--border); background: color-mix(in oklch, var(--surface) 48%, var(--background)); }
+.about-section-heading { max-width: 620px; margin-bottom: 34px; }
+.about-section-heading h2 { margin-bottom: 0; }
+.about-venture { display: grid; grid-template-columns: 0.9fr 1.1fr; column-gap: 56px; row-gap: 24px; padding-block: 32px; border-top: 1px solid var(--border); }
+.about-venture:last-child { border-bottom: 1px solid var(--border); }
+.about-venture-brand { display: flex; align-items: center; gap: 18px; }
+.about-venture-brand img { width: 58px; height: 58px; object-fit: contain; }
+.about-venture-brand h3 { font-size: 25px; font-weight: 550; margin-top: 3px; }
+.about-venture-copy .body-copy { max-width: 52ch; }
+.about-venture-copy .text-link { margin-top: 10px; }
+.about-impact { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--border); padding-top: 22px; }
+.about-impact > div { padding-inline: 22px; border-left: 1px solid var(--border); }
+.about-impact > div:first-child { padding-left: 0; border-left: 0; }
+.about-impact strong { display: block; font-size: 30px; line-height: 1.2; font-weight: 500; }
+.about-impact span { display: block; margin-top: 7px; font-size: 12px; color: var(--muted-foreground); }
+.about-reporting-note { grid-column: 1 / -1; font-size: 10px; color: var(--muted-foreground); }
+.about-perspective { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: start; }
+.about-principles article { display: grid; grid-template-columns: 54px 1fr; gap: 20px; padding-block: 24px; border-top: 1px solid var(--border); }
+.about-principles article:last-child { border-bottom: 1px solid var(--border); }
+.about-principles article > span { color: var(--primary); font-size: 13px; font-weight: 600; }
+.about-principles h3 { font-size: 21px; font-weight: 500; margin-bottom: 8px; }
+.about-next { padding-block: 74px; color: var(--foreground); border-block: 1px solid var(--border); background: var(--surface); }
+.about-next-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: end; }
+.about-next h2 { max-width: 600px; font-size: 48px; line-height: 1.2; font-weight: 500; margin-top: 20px; }
+.about-next .body-copy { max-width: 52ch; }
+.about-contact { padding-block: 76px; }
+.about-contact-inner { max-width: 850px; text-align: center; }
+.about-contact-inner > .eyebrow { justify-content: center; }
+.about-contact h2 { font-size: 42px; line-height: 1.25; font-weight: 500; margin-block: 18px 14px; }
+.about-contact .body-copy { max-width: 620px; margin-inline: auto; }
+.about-contact-actions { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 26px; }
+.about-contact-actions .text-link { margin-top: 0; }
 .contact-option { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; border-top: 1px solid var(--border); gap: 20px; }
 .contact-option strong { display: block; font-size: 20px; font-weight: 550; margin-top: 7px; overflow-wrap: anywhere; }
 .mobile-menu { display: none; }
